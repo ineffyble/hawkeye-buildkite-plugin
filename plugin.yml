@@ -1,0 +1,8 @@
+name: Hawkeye
+description: Run Hawkeye security scans against your project as a pipeline step
+author: https://github.com/ineffyble
+requirements:
+  - docker
+configuration:
+  properties: {}
+  additionalProperties: false

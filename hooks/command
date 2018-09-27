@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu -o pipefail
+
+echo "+++ Running Hawkeye"
+docker run --rm -v "$PWD:/target" stono/hawkeye
