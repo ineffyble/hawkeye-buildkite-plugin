@@ -2,4 +2,9 @@
 set -eu -o pipefail
 
 echo "+++ Running Hawkeye"
-docker run --rm -v "$PWD:/target" stono/hawkeye
+SCAN_LOG=$(docker run --rm -v "$PWD:/target" stono/hawkeye)
+SEARCH_STRING="[info] Doing writer: console"
+SCAN_RESULTS="${SCAN_LOG#${SEARCH_STRING}*}"
+
+echo "+++ Scan results"
+echo "${SCAN_RESULTS}"
