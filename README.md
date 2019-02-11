@@ -8,5 +8,5 @@ A Buildkite plugin for running Hawkeye security scans against your project as a 
 ```yml
 steps:
   - plugins:
-      ineffyble/hawkeye#v0.0.1: ~
+      - ineffyble/hawkeye#v0.0.1: ~
 ```
